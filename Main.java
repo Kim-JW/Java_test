@@ -1,18 +1,12 @@
 class Solution {
-    public int solution(String s) {
-        int answer = 0;
+    public int solution(int[] numbers) {
+        var map = new int[10];
 
-        for(int i=0; i< s.length()/2; i++){
-          
-        }
+        for (int v : numbers) map[v] = 1;
 
+        int sum = 0;
+        for (int v = 0; v < map.length; v++) sum += (map[v] == 0) ? v : 0;
 
-        return answer;
+        return sum;
     }
-}
-
-class Main {
-  public static void main(String[] args) {
-    System.out.println("Hello world!");
-  }
 }
